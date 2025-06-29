@@ -66,3 +66,26 @@ print(df.describe())
 
 
 #Selecting and Filtering Data
+"""
+🧠 What is Indexing and Slicing?
+Think of a DataFrame like an Excel table.
+
+Indexing = Selecting specific rows/columns.
+
+Slicing = Cutting out a range (like row 1 to 5)."""
+
+
+import pandas as pd 
+
+dataofindexing = {
+     "Name" :["krish","vraj","varun","kylo","anakin"]
+     ,"Age" : [22,34,23,78.98,45]
+     ,"city" :["ahemedabad","mumbai","delhi","pune","chennai"]
+}
+dfi= pd.DataFrame(dataofindexing)
+print(dfi)
+
+#🔍 1. Select a Single Column
+
+
+df['Name']
