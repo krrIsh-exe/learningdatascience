@@ -87,5 +87,28 @@ print(dfi)
 
 #🔍 1. Select a Single Column
 
+print("here")
 
-df['Name']
+print(dfi['Age'])
+
+
+dfi = pd.DataFrame(dataofindexing)
+print("now")
+
+print(dfi[dfi['Age']>30],"\n")                         # dfi[ condition goes here ]
+
+# 🔍 1. Filter: People older than 30
+# Shows rows where Age > 30
+print("👉 People older than 30:\n", dfi[dfi['Age'] > 30], "\n")
+
+# 🔍 2. Filter: People from Mumbai
+# Matches exact string in 'city' column
+print("👉 People from Mumbai:\n", dfi[dfi['city'] == 'mumbai'], "\n")
+
+# 🔍 3. Filter: Age between 25 and 50
+# Combines two conditions using '&' (and)
+print("👉 People with age between 25 and 50:\n", dfi[(dfi['Age'] >= 25) & (dfi['Age'] <= 50)], "\n")
+
+# 🔍 4. Filter: City is either Pune or Delhi
+# Uses .isin() to check if value is in the list
+print("👉 People from Pune or Delhi:\n", dfi[dfi['city'].isin(['pune', 'delhi'])], "\n")
