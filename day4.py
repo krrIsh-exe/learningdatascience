@@ -112,3 +112,22 @@ print("👉 People with age between 25 and 50:\n", dfi[(dfi['Age'] >= 25) & (dfi
 # 🔍 4. Filter: City is either Pune or Delhi
 # Uses .isin() to check if value is in the list
 print("👉 People from Pune or Delhi:\n", dfi[dfi['city'].isin(['pune', 'delhi'])], "\n")
+
+
+#🔍 3. Selecting Rows and Columns: 
+# .iloc vs .loc
+
+print(df.iloc[0])            # Entire first row
+print(df.iloc[1:4])          # Rows 1 to 3
+print(df.iloc[:, 1])         # All 'Age' column values
+print(df.iloc[2, 0])         # 'Varun' (row 2, column 0)
+
+# loc
+print(df.loc[0])                       # Entire first row (label 0)
+print(df.loc[1:3])                     # Rows 1 to 3 (inclusive)
+print(df.loc[:, 'Name'])              # All names
+print(df.loc[2, ['Name', 'Age']])    # 'Varun' and 'Delhi'
+
+
+## range(1, 5)  # This is NOT inclusive of 5
+## Output: 1, 2, 3, 4 ❌ 5 not included
