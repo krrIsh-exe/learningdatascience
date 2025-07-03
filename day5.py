@@ -47,11 +47,21 @@ print(data)
 print(df1.groupby('Department')['Salary'].sum())
         
       # 👉 Group by department and apply multiple aggregations
+#.agg()
+'''🤖 What does .agg() do?
+👉 It allows you to apply multiple functions at the same time to a grouped dataset.
+Think of .agg() as a multi-tool — instead of calling .sum(), .mean(), .count() separately, you can use .agg() to do all of them together in one shot.'''
+
+
+
+
+
+
 result = df1.groupby('Department').agg(
-    Total_Salary=('Salary', 'sum'),
-    Average_Salary=('Salary', 'mean'),
-    Employee_Count=('Salary', 'count'),
-    Max_Salary=('Salary', 'max')
-)
+    Total_Salary=('Salary','sum'),
+    Average_Salary=('Salary','mean'),
+    Employee_Count=('Salary','count'),
+    Max_Salary=('Salary','max')
+    )
 
 print(result)
