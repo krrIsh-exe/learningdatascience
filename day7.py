@@ -5,7 +5,17 @@ We need to:
 
 Detect missing values
 
-Decide whether to remove or fill them"""
+Decide whether to remove or fill them
+
+Handling missing data is not just about cleaning;
+it's about preserving the integrity and usefulness of your dataset. 
+By thoughtfully detecting missing values and strategically deciding whether to remove or impute them,
+you ensure that your statistical analyses are robust and your machine learning models are accurate and reliable.
+Ignoring missing data is a recipe for misleading results and poor decision-making.
+
+
+
+"""
 
 import pandas as pd
 import numpy as np
