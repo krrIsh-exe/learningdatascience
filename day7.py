@@ -84,3 +84,16 @@ print("Null mask:\n", null_mask, "\n")
 print("Null count per column:\n", null_count, "\n")
 print("Rows without NaN:\n", df_drop_rows, "\n")
 print("Filled with zeros:\n", df_fill_zero, "\n")
+
+
+"""
+🔁 Summary Table
+Method	Description
+fillna(0)	Replace NaN with fixed value
+fillna(mean)	Replace NaN with average
+method='ffill'	Fill with value from above
+method='bfill'	Fill with value from below
+
+
+
+"""
