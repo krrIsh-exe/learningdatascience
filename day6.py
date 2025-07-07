@@ -27,4 +27,5 @@ print(df.sort_index(ascending=False)) # decending orderindexing
 print(df.sort_values(['Department', 'Salary']))   #➡️ First by 'Department', then by 'Salary' within each department.
 
 df['Salary_Rank'] = df['Salary'].rank(ascending=False)  #➡️ Higher salary gets rank 1.
+print(df)
 
