@@ -97,3 +97,41 @@ method='bfill'	Fill with value from below
 
 
 """
+
+
+data1 = {
+    'Name' : ['Alice', 'Bob', 'Charlie'],
+    'Age'  : [25, np.nan, 30],
+    'Score': [85, 90, np.nan],
+    'Rank': [43, np.nan, 3]
+}
+df3 = pd.DataFrame(data1)
+
+df3.isnull()
+df3.isnull().sum()
+print(df3.isnull())
+print(df3.isnull().sum())  # it counts number of nan in each and every collumnss
+
+
+df3.dropna() # drop rows with any NaN
+dropnancollumnswise=df3.dropna(axis=1) # drop columns with any NaN
+print(dropnancollumnswise)
+
+data4 = {
+    'Name' : ["Alice","krish","vraj","varun"],
+    'rank' : [1,2,3,np.nan],
+    'score' : [85,np.nan,95,100],
+    'age' : [25,30,np.nan,40]
+}
+
+df4 = pd.DataFrame(data4)
+print(df4)
+
+df4.fillna(0 ,inplace=True)
+print(df4)
+
+agemeannan=df4.copy()
+agemeannan['age'].fillna(df4['age'].mean(), inplace=True)
+
+print(agemeannan)
+

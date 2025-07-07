@@ -63,5 +63,10 @@ result = df1.groupby('Department').agg(
     Employee_Count=('Salary','count'),
     Max_Salary=('Salary','max')
     )
+# df.groupby('Department').agg({
+#     'Salary': ['mean', 'max'],
+#     'Employee': 'count'
+# })
+# print(result)
 
 print(result)
