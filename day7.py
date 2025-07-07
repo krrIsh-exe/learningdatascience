@@ -14,6 +14,17 @@ you ensure that your statistical analyses are robust and your machine learning m
 Ignoring missing data is a recipe for misleading results and poor decision-making.
 NaN is a ubiquitous placeholder in data science for values that are absent, unknown, or mathematically undefined.
 Understanding its behavior is fundamental to cleaning and preparing data effectively.
+
+
+Even though np.nan means "Not a Number", Pandas still uses it as a universal marker for missing data, including:
+
+🧮 Numbers (int, float)
+
+🔤 Strings (text)
+
+🗓️ Dates
+
+💯 Booleans
 """
 
 import pandas as pd
