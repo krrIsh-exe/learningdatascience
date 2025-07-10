@@ -56,24 +56,17 @@ outer_join = pd.merge(df_left, df_right, on='EmpID', how='outer')
 print("▶ OUTER JOIN (union of both tables)\n", outer_join)
 
 
-# ✅ Output:
-# nginx
-# Copy
-# Edit
-#    EmpID    Name Department
-# 0      2     Bob         HR
-# 1      3  Charlie         IT
-# 👉 It joined the rows where EmpID matches.
-
-# 📊 Different Types of Join:
-# 🔁 Try changing how='inner' to:
-# Join Type	What it does
-# inner	Only shows matching EmpIDs in both tables
-# left	Shows all from df1, fills blanks if needed
-# right	Shows all from df2, fills blanks if needed
-# outer	Shows all from both, fills missing with NaN
 
 """
+
+📊 Different Types of Join:
+🔁 Try changing how='inner' to:
+Join Type	What it does
+inner	Only shows matching EmpIDs in both tables
+left	Shows all from df1, fills blanks if needed
+right	Shows all from df2, fills blanks if needed
+outer	Shows all from both, fills missing with NaN
+
 LEFT (df_left):
    EmpID     Name
 0      1    Alice
