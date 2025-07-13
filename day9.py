@@ -46,3 +46,14 @@ print(pivot)
 # values	What to calculate (e.g., salary, marks)
 # aggfunc	Aggregation method (e.g., mean, sum)
 # margins=True	Add total row/column
+
+
+import pandas as pd
+
+data = {
+    'Department': ['IT', 'HR', 'IT', 'HR', 'Sales', 'Sales', 'IT'],
+    'Gender': ['Male', 'Female', 'Female', 'Male', 'Female', 'Male', 'Male']
+}
+
+df = pd.DataFrame(data)
+print(df)
