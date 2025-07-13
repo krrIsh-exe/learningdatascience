@@ -47,6 +47,8 @@ print(pivot)
 # aggfunc	Aggregation method (e.g., mean, sum)
 # margins=True	Add total row/column
 
+#  ===>  crosstab()
+# 	    Counting how often things occur (frequency)
 
 import pandas as pd
 
@@ -57,3 +59,25 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
+
+result = pd.crosstab(df['Department'], df['Gender'])
+print(result)
+
+
+pd.crosstab(df['Department'], df['Gender'], margins=True)  # advance cross tab code
+
+import pandas as pd
+
+data = {
+    'Class': ['10A', '10A', '10B', '10B', '10A', '10C', '10B', '10C'],
+    'Gender': ['Male', 'Female', 'Female', 'Male', 'Male', 'Female', 'Female', 'Male'],
+    'Passed': ['Yes', 'Yes', 'No', 'Yes', 'No', 'Yes', 'Yes', 'No']
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+print(pd.crosstab(df['Class'],df['Gender']))
+
+print(pd.crosstab(df['Class'],df['Passed'],margins=True))
+
