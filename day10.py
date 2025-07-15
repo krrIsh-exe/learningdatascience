@@ -38,7 +38,7 @@ print(df)
 
 # 🎯 applymap() — Works only on DataFrame
 
-df = pd.DataFrame({
+df = pd.DataFrame({                                   #it does not works on series
     'Math': [70, 80, 90],
     'Science': [60, 75, 85]
 })
