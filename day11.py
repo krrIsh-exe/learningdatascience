@@ -20,6 +20,10 @@ print("\nMelted DataFrame:")
 print(melted_df)
 
 
+
+#-----------------------------------------------------------------------------------------------------------------------------------
+
+
 # 2. stack() and unstack() — Pivot levels in index/columns
 # ✅ stack():
 # Moves columns into index (compresses columns down into rows).
@@ -55,3 +59,16 @@ print(unstacked)
 # pivot()	Long ➡ Wide	Opposite of melt
 # stack()	Column → Index	Collapse levels for hierarchical data
 # unstack()	Index → Column	Expand levels into columns
+
+
+# practice session 
+import pandas as pd
+mdf = pd.DataFrame ({
+    'name': ['krish','anakin'],
+    'score':[50,78],
+
+    
+})
+print('mdf')
+mdf =mdf.set_index(['name','score'])
+print(mdf)
