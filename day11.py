@@ -48,3 +48,10 @@ print(stacked)
 unstacked = df.unstack()
 print("\nUnstacked:")
 print(unstacked)
+
+
+# Function	Action	Use Case
+# melt()	Wide ➡ Long	Tidy messy data with many columns
+# pivot()	Long ➡ Wide	Opposite of melt
+# stack()	Column → Index	Collapse levels for hierarchical data
+# unstack()	Index → Column	Expand levels into columns
