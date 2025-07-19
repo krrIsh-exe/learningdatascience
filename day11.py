@@ -20,6 +20,14 @@ print("\nMelted DataFrame:")
 print(melted_df)
 
 
+# pd.melt(
+#     frame,             # ← Your original DataFrame
+#     id_vars=None,      # ← Columns to keep fixed (like title, name)
+#     value_vars=None,   # ← Columns you want to melt (optional)
+#     var_name=None,     # ← Name of the new "feature name" column
+#     value_name='value' # ← Name of the new "value" column
+# )
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------
 
@@ -55,8 +63,8 @@ print(unstacked)
 
 
 # Function	Action	Use Case
-# melt()	Wide ➡ Long	Tidy messy data with many columns
-# pivot()	Long ➡ Wide	Opposite of melt
+# melt()	Wide ➡ Long	Tidy messy data with many columns                    (Converts collumns in to rows)
+# pivot()	Long ➡ Wide	Opposite of melt                                     (Converts rows in to columns)
 # stack()	Column → Index	Collapse levels for hierarchical data
 # unstack()	Index → Column	Expand levels into columns
 
